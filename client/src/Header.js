@@ -11,7 +11,7 @@ export default function Header() {
 
   const { setUserInfo, userInfo } = useContext(UserContext)
 
-  const SERVER_URL = import.meta.env.SERVER_URL;
+  //const SERVER_URL = import.meta.env.SERVER_URL;
 
   useEffect(() => {
     fetch( `${SERVER_URL}/profile`, {
