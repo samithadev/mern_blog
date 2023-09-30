@@ -14,7 +14,6 @@ import {
 export default function Posts({ _id, title, summery, cover, content, createdAt, auth }) {
     return (
         <Container maxW={'7xl'} p="5">
-        const SERVER_URL = import.meta.env.SERVER_URL;
             <div>
                 {/* Posts */}
                 <div className='post'>
@@ -33,7 +32,7 @@ export default function Posts({ _id, title, summery, cover, content, createdAt, 
                             <Link to={`/post/${_id}`} textDecoration="none" _hover={{ textDecoration: 'none' }}>
                                 <Image
                                     borderRadius="lg"
-                                    src={`${SERVER_URL}/` + cover}
+                                    src={'https://blog-server-rzov.onrender.com/' + cover}
                                     alt="some good alt text"
                                     objectFit="contain"
                                 />
