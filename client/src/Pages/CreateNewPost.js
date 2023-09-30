@@ -12,6 +12,7 @@ export default function CreateNewPost() {
     const [content, setContent] = useState('')
     const [file, setFile] = useState('')
     const [redirect, setRedirect] = useState(false)
+    const SERVER_URL = import.meta.env.SERVER_URL;
 
     async function createPost(ev){
         ev.preventDefault()

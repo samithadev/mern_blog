@@ -9,6 +9,8 @@ export default function Register() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
+  const SERVER_URL = import.meta.env.SERVER_URL;
+
   async function onRegister(ev) {
     ev.preventDefault()
 

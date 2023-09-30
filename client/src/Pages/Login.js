@@ -13,6 +13,8 @@ export default function Login() {
   const [redirect, setRedirect] = useState(false)
   const { setUserInfo } = useContext(UserContext)
 
+  const SERVER_URL = import.meta.env.SERVER_URL;
+
   async function login(ev) {
     ev.preventDefault()
     const response = await fetch(`${SERVER_URL}/login`, {

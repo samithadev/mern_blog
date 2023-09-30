@@ -3,6 +3,7 @@ import Posts from './Posts'
 
 export default function AllPosts() {
     const [posts, setPosts] = useState([])
+    const SERVER_URL = import.meta.env.SERVER_URL;
 
     useEffect(()=>{
         fetch(`${SERVER_URL}/post`).then(response => {

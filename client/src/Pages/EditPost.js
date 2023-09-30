@@ -15,6 +15,8 @@ export default function EditPost() {
     const [file, setFile] = useState('')
     const [redirect, setRedirect] = useState(false)
 
+    const SERVER_URL = import.meta.env.SERVER_URL;
+
     useEffect(() => {
         fetch(`${SERVER_URL}/post/${id}`)
             .then(response => {

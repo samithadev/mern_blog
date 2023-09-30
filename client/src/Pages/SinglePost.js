@@ -19,6 +19,8 @@ export default function SinglePost() {
 
     const { id } = useParams()
 
+    const SERVER_URL = import.meta.env.SERVER_URL;
+
     useEffect(() => {
         fetch(`${SERVER_URL}/post/${id}`).then(
             response => {
