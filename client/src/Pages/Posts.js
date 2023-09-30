@@ -32,7 +32,7 @@ export default function Posts({ _id, title, summery, cover, content, createdAt, 
                             <Link to={`/post/${_id}`} textDecoration="none" _hover={{ textDecoration: 'none' }}>
                                 <Image
                                     borderRadius="lg"
-                                    src={'http://localhost:4000/' + cover}
+                                    src={`${SERVER_URL}/` + cover}
                                     alt="some good alt text"
                                     objectFit="contain"
                                 />

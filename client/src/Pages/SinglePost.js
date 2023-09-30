@@ -20,7 +20,7 @@ export default function SinglePost() {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`).then(
+        fetch(`${SERVER_URL}/post/${id}`).then(
             response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo)
@@ -30,7 +30,7 @@ export default function SinglePost() {
     }, [])
 
     const handleDelete = () => {
-        fetch(`http://localhost:4000/post/${id}`, {
+        fetch(`${SERVER_URL}/post/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export default function SinglePost() {
                     zIndex="2"
                     marginLeft={{ base: '0', sm: '5%' }}
                     marginTop="3%">
-                    <Image objectFit="contain" src={`http://localhost:4000/${postInfo.cover}`} />
+                    <Image objectFit="contain" src={`${SERVER_URL}/${postInfo.cover}`} />
                 </Box >
 
                 <Text as="p" fontSize="lg">
